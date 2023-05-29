@@ -27,7 +27,14 @@ func main() {
 
 	skipDir[".github"] = true
 
+	skipDir[".vscode"] = true
+
+	skipDir[".stfolder"] = true
+
 	skipDir["scripts"] = true
+
+	skipFile := make(map[string]bool)
+	skipFile["LICENSE"] = true
 
 	err = os.MkdirAll(buildDir, os.FileMode(0766))
 	if err != nil && !errors.Is(err, os.ErrExist) {
@@ -47,6 +54,7 @@ func main() {
 		}
 
 		if skipExt[filepath.Ext(path)] ||
+			skipFile[info.Name()] ||
 			filepath.Dir(path) == cwd {
 			return nil
 		}

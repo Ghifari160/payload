@@ -28,6 +28,10 @@ func main() {
 
 	skipDir[".github"] = true
 
+	skipDir[".vscode"] = true
+
+	skipDir[".stfolder"] = true
+
 	skipDir["scripts"] = true
 
 	buildDirAbs, err := filepath.Abs(buildDir)

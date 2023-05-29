@@ -27,7 +27,14 @@ func main() {
 
 	skipDir[".github"] = true
 
+	skipDir[".vscode"] = true
+
+	skipDir[".stfolder"] = true
+
 	skipDir["scripts"] = true
+
+	skipFile := make(map[string]bool)
+	skipFile["LICENSE"] = true
 
 	filepath.WalkDir(cwd, func(path string, info fs.DirEntry, err error) error {
 		if path == cwd {
@@ -41,6 +48,7 @@ func main() {
 		}
 
 		if skipExt[filepath.Ext(path)] ||
+			skipFile[info.Name()] ||
 			filepath.Dir(path) == cwd {
 			return nil
 		}
