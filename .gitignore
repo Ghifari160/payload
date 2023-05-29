@@ -20,6 +20,10 @@ coverage.out
 .vscode
 
 # Project-specific ignores
+payload/
+*.sha*
+*.md5
+*.medhash.json
 
 # File sync solutions
 *.stignore

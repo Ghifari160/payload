@@ -1,0 +1,30 @@
+name: Upload payloads
+on: [ push, workflow_call, workflow_dispatch ]
+
+jobs:
+  upload:
+    runs-on: ubuntu-22.04
+    steps:
+      - name: Setup repository
+        uses: actions/checkout@v3
+      - name: Setup Go
+        uses: actions/setup-go@v3
+        with:
+          go-version: "^1.20.2"
+      - name: Setup s3cmd
+        uses: s3-actions/s3cmd@v1.3.0
+        with:
+          provider: ${{env.S3_PROVIDER}}
+          region: ${{env.S3_REGION}}
+          access_key: ${{secrets.S3_ACCESS_KEY}}
+          secret_key: ${{secrets.S3_SECRET_KEY}}
+      - name: Generate hashes
+        run: |
+          go run scripts/genhash.go
+      - name: Merge payloads
+        run: |
+          go run scripts/mergedir.go
+      - name: Upload payloads
+        env:
+          INPUT: payload
+        run: s3cmd put $INPUT $S3_BUCKET --recursive
