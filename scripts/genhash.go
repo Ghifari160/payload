@@ -86,7 +86,9 @@ func hasher(utility, filePath, outPath string) error {
 		return err
 	}
 
-	cmd := exec.Command(utility, filePath)
+	cmd := exec.Command(utility, filepath.Base(filePath))
+	cmd.Dir = filepath.Dir(filePath)
+
 	sum, err := cmd.Output()
 	if err != nil {
 		return err
