@@ -14,8 +14,8 @@ jobs:
       - name: Setup s3cmd
         uses: s3-actions/s3cmd@v1.5.0
         with:
-          provider: ${{env.S3_PROVIDER}}
-          region: ${{env.S3_REGION}}
+          provider: ${{vars.S3_PROVIDER}}
+          region: ${{vars.S3_REGION}}
           access_key: ${{secrets.S3_ACCESS_KEY}}
           secret_key: ${{secrets.S3_SECRET_KEY}}
       - name: Generate hashes
