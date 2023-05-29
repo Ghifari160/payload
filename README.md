@@ -9,9 +9,9 @@ Currently, the supported algorithms are SHA1, SHA256, MD5.
 
 This short text payload is perfect for unit testing I/O operations.
 
-|         | URLs                                                       |
-|---------|------------------------------------------------------------|
-| Payload | `https://projects.gassets.space/payload/text.payload`      |
-| SHA1    | `https://projects.gassets.space/payload/text.sha1`         |
-| SHA256  | `https://projects.gassets.space/payload/text.sha256`       |
-| MD5     | `https://projects.gassets.space/payload/text.md5`          |
+|         | URLs                                                         |
+|---------|--------------------------------------------------------------|
+| Payload | `https://projects.gassets.space/payload/text.payload`        |
+| SHA1    | `https://projects.gassets.space/payload/text.payload.sha1`   |
+| SHA256  | `https://projects.gassets.space/payload/text.payload.sha256` |
+| MD5     | `https://projects.gassets.space/payload/text.payload.md5`    |
