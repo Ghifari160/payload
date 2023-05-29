@@ -33,6 +33,8 @@ func main() {
 
 	skipDir["scripts"] = true
 
+	skipDir[buildDir] = true
+
 	skipFile := make(map[string]bool)
 	skipFile["LICENSE"] = true
 
