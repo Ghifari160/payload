@@ -15,3 +15,16 @@ This short text payload is perfect for unit testing I/O operations.
 | SHA1    | `https://projects.gassets.space/payload/text.payload.sha1`   |
 | SHA256  | `https://projects.gassets.space/payload/text.payload.sha256` |
 | MD5     | `https://projects.gassets.space/payload/text.payload.md5`    |
+
+## Jar Payload
+
+This payload is a component of a future project.
+It is available under the terms of the MIT License.
+The main classpath for this jar is `com.ghifari160.incompat.JavaInfo`.
+
+|         | URLs                                                         |
+|---------|--------------------------------------------------------------|
+| Payload | `https://projects.gassets.space/payload/javainfo.jar`        |
+| SHA1    | `https://projects.gassets.space/payload/javainfo.jar.sha1`   |
+| SHA256  | `https://projects.gassets.space/payload/javainfo.jar.sha256` |
+| MD5     | `https://projects.gassets.space/payload/javainfo.jar.md5`    |
