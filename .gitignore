@@ -1,0 +1,26 @@
+# OS-specific ignores
+## Windows
+Thumbs.db
+
+## macOS
+.DS_Store
+
+## Linux
+lost+found
+
+# Stack-specific ignores
+## Common
+
+## Go
+out/
+coverage.out
+
+# IDE-specific ignores
+## Visual Studio Code
+.vscode
+
+# Project-specific ignores
+
+# File sync solutions
+*.stignore
+*.stfolder
