@@ -26,5 +26,6 @@ jobs:
           go run scripts/mergedir.go
       - name: Upload payloads
         env:
-          INPUT: payload
-        run: s3cmd put $INPUT $S3_BUCKET --recursive
+          INPUT: payload/
+          OUTPUT: ${{vars.S3_BUCKET}}
+        run: s3cmd put "$INPUT" -P "$OUTPUT" --recursive
