@@ -28,3 +28,14 @@ The main classpath for this jar is `com.ghifari160.incompat.JavaInfo`.
 | SHA1    | `https://projects.gassets.space/payload/javainfo.jar.sha1`   |
 | SHA256  | `https://projects.gassets.space/payload/javainfo.jar.sha256` |
 | MD5     | `https://projects.gassets.space/payload/javainfo.jar.md5`    |
+
+## Blacklisted Payload
+
+This short text payload is intended for use in testing a blacklisting system.
+
+|         | URLs                                                                |
+|---------|---------------------------------------------------------------------|
+| Payload | `https://projects.gassets.space/payload/blacklisted.payload`        |
+| SHA1    | `https://projects.gassets.space/payload/blacklisted.payload.sha1`   |
+| SHA256  | `https://projects.gassets.space/payload/blacklisted.payload.sha256` |
+| MD5     | `https://projects.gassets.space/payload/blacklisted.payload.md5`    |
